@@ -45,14 +45,10 @@ resource "postgresql_database" "db" {
 // other users in the database instance from being able
 // to access it.
 resource "postgresql_grant" "revoke_other" {
-  for_each = var.db_names
+  for_each = postgresql_database.db
 
-  database    = each.value
+  database    = each.value.name
   role        = "public"
   object_type = "database"
   privileges  = []
-
-  depends_on = [
-    postgresql_database.db["${each.value}"]
-  ]
 }
