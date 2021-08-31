@@ -51,4 +51,8 @@ resource "postgresql_grant" "revoke_other" {
   role        = "public"
   object_type = "database"
   privileges  = []
+
+  depends_on = [
+    postgresql_database.db["${each.value}"]
+  ]
 }
