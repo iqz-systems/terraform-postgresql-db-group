@@ -1,5 +1,5 @@
 output "db_names" {
-  value       = postgresql_database.db[*].name
+  value       = [for value in postgresql_database.db : value.name]
   sensitive   = false
   description = "A set containing all names of the databases."
 }

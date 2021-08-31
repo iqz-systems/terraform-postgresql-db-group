@@ -32,7 +32,7 @@ module "app_dbs" {
 
 ## Outputs
 
-- `db_names` set(string)
+- `db_names` list(string)
   - A set containing all names of the databases.
 - `db_username` string
   - The username using which the database can be accessed.
