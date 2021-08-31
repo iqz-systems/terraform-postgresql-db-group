@@ -1,4 +1,4 @@
-# terraform-postgresql-new-database
+# terraform-postgresql-db-group
 
 Terraform module to create a set of databases with the same username and password using the [postgresql](https://registry.terraform.io/providers/cyrilgdn/postgresql/latest/docs) provider.
 
