@@ -32,8 +32,12 @@ module "app_dbs" {
 
 ## Outputs
 
+- `db_names` set(string)
+  - A set containing all names of the databases.
+- `db_username` string
+  - The username using which the database can be accessed.
 - `db_password` string
-  - The password associated with the user for the database.
+  - The password associated with the user for the databases.
 
 ## Links
 
